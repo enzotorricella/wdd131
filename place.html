@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="WDD 131 country page about Monaco, highlighting its Mediterranean coast, compact geography, and static weather details."
+    >
+    <meta name="author" content="Enzo Torricella">
+
+    <title>WDD 131 - Monaco - Enzo Torricella</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Roboto:wght@400;500;700&amp;display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Monaco</h1>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Monaco coast">
+            <img
+                src="images/monaco-coast-small.webp"
+                srcset="images/monaco-coast-small.webp 640w, images/monaco-coast-large.webp 1400w"
+                sizes="100vw"
+                alt="Monaco coastline with the Mediterranean Sea and coastal city buildings"
+                width="1400"
+                height="650"
+            >
+
+            <div class="content-grid">
+                <section class="info-card data-card">
+                    <h2>Data</h2>
+                    <dl>
+                        <div>
+                            <dt>Area:</dt>
+                            <dd>2.08 km&sup2;</dd>
+                        </div>
+                        <div>
+                            <dt>Population:</dt>
+                            <dd>38,400</dd>
+                        </div>
+                        <div>
+                            <dt>Capital:</dt>
+                            <dd>Monaco</dd>
+                        </div>
+                        <div>
+                            <dt>Language:</dt>
+                            <dd>French</dd>
+                        </div>
+                        <div>
+                            <dt>Currency:</dt>
+                            <dd>Euro</dd>
+                        </div>
+                        <div>
+                            <dt>Coast:</dt>
+                            <dd>Mediterranean Sea</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="info-card weather-card">
+                    <div class="weather-title">
+                        <h2>Weather</h2>
+                        <img
+                            class="weather-icon"
+                            src="images/partly-cloudy.svg"
+                            alt="Partly cloudy weather"
+                            width="56"
+                            height="56"
+                        >
+                    </div>
+                    <dl>
+                        <div>
+                            <dt>Temperature:</dt>
+                            <dd><span id="temperature">8</span>&deg;C</dd>
+                        </div>
+                        <div>
+                            <dt>Conditions:</dt>
+                            <dd>Clear coast breeze</dd>
+                        </div>
+                        <div>
+                            <dt>Wind:</dt>
+                            <dd><span id="wind-speed">12</span> km/h</dd>
+                        </div>
+                        <div>
+                            <dt>Wind Chill:</dt>
+                            <dd id="wind-chill">N/A</dd>
+                        </div>
+                    </dl>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Enzo Torricella | Argentina
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

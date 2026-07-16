@@ -1,0 +1,180 @@
+:root {
+    --navy: #0b2f3a;
+    --deep-sea: #063f4a;
+    --sea: #0f6f84;
+    --sand: #f5efe2;
+    --sun: #f3c96b;
+    --ink: #1c2528;
+    --card: rgb(255 255 255 / 92%);
+    --shadow: 0 8px 28px rgb(0 0 0 / 22%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: var(--sand);
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+header,
+footer {
+    background-color: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+header {
+    border-bottom: 8px solid var(--sun);
+}
+
+h1,
+h2 {
+    font-family: "Merriweather", Georgia, serif;
+}
+
+h1 {
+    margin: 0;
+    padding: 1.35rem 1rem;
+    font-size: 2.1rem;
+}
+
+.hero {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.info-card {
+    background-color: white;
+    border-top: 6px solid var(--sea);
+    box-shadow: 0 3px 12px rgb(0 0 0 / 12%);
+}
+
+.info-card h2 {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    background-color: var(--deep-sea);
+    color: white;
+    text-align: center;
+}
+
+dl {
+    margin: 0;
+    padding: 1rem;
+}
+
+dl div {
+    display: grid;
+    grid-template-columns: minmax(8rem, 42%) 1fr;
+    gap: 0.75rem;
+    padding: 0.3rem 0;
+}
+
+dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+dd {
+    margin: 0;
+}
+
+.weather-title {
+    position: relative;
+}
+
+.weather-icon {
+    display: block;
+    margin: 1rem auto 0;
+}
+
+footer {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+#lastModified {
+    color: var(--sun);
+}
+
+@media screen and (min-width: 760px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    main {
+        background-color: #d8ecf0;
+    }
+
+    .hero {
+        position: relative;
+        min-height: 650px;
+        overflow: hidden;
+    }
+
+    .hero > img {
+        min-height: 650px;
+        object-fit: cover;
+    }
+
+    .content-grid {
+        position: absolute;
+        inset: 0;
+        align-content: center;
+        grid-template-columns: minmax(18rem, 24rem) 1fr minmax(18rem, 24rem);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .data-card {
+        grid-column: 1;
+        align-self: start;
+    }
+
+    .weather-card {
+        grid-column: 3;
+        align-self: end;
+    }
+
+    .info-card {
+        background-color: var(--card);
+        box-shadow: var(--shadow);
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-card h2::after {
+        content: "";
+        display: inline-block;
+        width: 2.15rem;
+        height: 2.15rem;
+        margin-left: 0.65rem;
+        vertical-align: -0.45rem;
+        background-image: url("../images/partly-cloudy.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

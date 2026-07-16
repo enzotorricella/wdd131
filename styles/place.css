@@ -167,14 +167,11 @@ footer p {
     }
 
     .weather-card h2::after {
-        content: "";
+        content: "⛅";
         display: inline-block;
-        width: 2.15rem;
-        height: 2.15rem;
         margin-left: 0.65rem;
-        vertical-align: -0.45rem;
-        background-image: url("../images/partly-cloudy.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
+        font-family: "Roboto", Arial, sans-serif;
+        font-size: 1.85rem;
+        vertical-align: -0.35rem;
     }
 }
